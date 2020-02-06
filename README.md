@@ -1,6 +1,6 @@
-# Руководство по написанию JavaScript кода от [Airbnb](https://github.com/airbnb/javascript/)() {
+# Руководство по написанию JavaScript-кода от [Airbnb](https://github.com/airbnb/javascript/)() {
 
-*Наиболее разумный подход к написанию JavaScript кода*
+*Наиболее разумный подход к написанию JavaScript-кода*
 
 > **Замечание**: это руководство подразумевает использование [Babel](https://babeljs.io) вместе с [babel-preset-airbnb](https://npmjs.com/babel-preset-airbnb) или аналогом. Оно также предполагает установленный shims/polyfills в вашем приложении, такой как [airbnb-browser-shims](https://npmjs.com/airbnb-browser-shims) или аналог.
 
@@ -12,8 +12,8 @@
 
 Другие руководства
 
- - [React](react/)
- - [CSS-in-JavaScript](css-in-javascript/)
+  - [React](react/)
+  - [CSS-in-JavaScript](css-in-javascript/)
 
 ## Оглавление
 
@@ -30,7 +30,7 @@
   1. [Итераторы и генераторы](#iterators-and-generators)
   1. [Свойства](#properties)
   1. [Переменные](#variables)
-  1. [Подъем](#hoisting)
+  1. [Подъём](#hoisting)
   1. [Операторы сравнения и равенства](#comparison-operators--equality)
   1. [Блоки](#blocks)
   1. [Управляющие операторы](#control-statements)
@@ -77,10 +77,10 @@
     console.log(foo, bar); // => 1, 9
     ```
 
-    - Символы не могут быть полностью заполифиллины, поэтому они не должны использоваться, если разработка ведется для браузеров/сред, которые не поддерживают их нативно.
+    - Символы не могут быть полностью заполифиллены, поэтому они не должны использоваться, если разработка ведётся для браузеров/сред, которые не поддерживают их нативно.
 
   <a name="types--complex"></a><a name="1.2"></a>
-  - [1.2](#types--complex)  **Сложные типы**: Когда вы взаимодействуете со сложным типом, вы работаете с ссылкой на его значение.
+  - [1.2](#types--complex)  **Сложные типы**: Когда вы взаимодействуете со сложным типом, вы работаете со ссылкой на его значение.
 
     - `object`
     - `array`
@@ -162,7 +162,7 @@
     ```
 
   <a name="es6-computed-properties"></a><a name="3.4"></a>
-  - [3.2](#es6-computed-properties) Используйте вычисляемые имена свойств, когда создаете объекты с динамическими именами свойств.
+  - [3.2](#es6-computed-properties) Используйте вычисляемые имена свойств, когда создаёте объекты с динамическими именами свойств.
 
     > Почему? Они позволяют вам определить все свойства объекта в одном месте.
 
@@ -188,7 +188,7 @@
     ```
 
   <a name="es6-object-shorthand"></a><a name="3.5"></a>
-  - [3.3](#es6-object-shorthand) Используйте сокращенную запись метода объекта. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand.html)
+  - [3.3](#es6-object-shorthand) Используйте сокращённую запись метода объекта. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand.html)
 
     ```javascript
     // плохо
@@ -211,7 +211,7 @@
     ```
 
   <a name="es6-object-concise"></a><a name="3.6"></a>
-  - [3.4](#es6-object-concise) Используйте сокращенную запись свойств объекта. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand.html)
+  - [3.4](#es6-object-concise) Используйте сокращённую запись свойств объекта. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand.html)
 
     > Почему? Это короче и понятнее.
 
@@ -230,9 +230,9 @@
     ```
 
   <a name="objects--grouped-shorthand"></a><a name="3.7"></a>
-  - [3.5](#objects--grouped-shorthand) Группируйте ваши сокращенные записи свойств в начале объявления объекта.
+  - [3.5](#objects--grouped-shorthand) Группируйте ваши сокращённые записи свойств в начале объявления объекта.
 
-    > Почему? Так легче сказать, какие свойства используют сокращенную запись.
+    > Почему? Так легче сказать, какие свойства используют сокращённую запись.
 
     ```javascript
     const anakinSkywalker = 'Anakin Skywalker';
@@ -262,7 +262,7 @@
   <a name="objects--quoted-props"></a><a name="3.8"></a>
   - [3.6](#objects--quoted-props) Только недопустимые идентификаторы помещаются в кавычки. eslint: [`quote-props`](https://eslint.org/docs/rules/quote-props.html)
 
-    > Почему? На наш взгляд, такой код легче читать. Это улучшает подсветку синтаксиса, а также облегчает оптимизацию для многих JS движков.
+    > Почему? На наш взгляд, такой код легче читать. Это улучшает подсветку синтаксиса, а также облегчает оптимизацию для многих JS-движков.
 
     ```javascript
     // плохо
@@ -281,7 +281,7 @@
     ```
 
   <a name="objects--prototype-builtins"></a>
-  - [3.7](#objects--prototype-builtins) Не вызывайте напрямую методы `Object.prototype`, такие как `hasOwnProperty`, `propertyIsEnumerable`, и `isPrototypeOf`.
+  - [3.7](#objects--prototype-builtins) Не вызывайте напрямую методы `Object.prototype`, такие как `hasOwnProperty`, `propertyIsEnumerable`, и `isPrototypeOf`. eslint: [`no-prototype-builtins`](https://eslint.org/docs/rules/no-prototype-builtins)
 
     > Почему? Эти методы могут быть переопределены в свойствах объекта, который мы проверяем `{ hasOwnProperty: false }`, или этот объект может быть `null` (`Object.create(null)`).
 
@@ -294,10 +294,10 @@
 
     // отлично
     const has = Object.prototype.hasOwnProperty; // Кэшируем запрос в рамках модуля.
+    console.log(has.call(object, key));
     /* или */
     import has from 'has'; // https://www.npmjs.com/package/has
-    // ...
-    console.log(has.call(object, key));
+    console.log(has(object, key));
     ```
 
   <a name="objects--rest-spread"></a>
@@ -365,8 +365,9 @@
     const itemsCopy = [...items];
     ```
 
-  <a name="arrays--from"></a><a name="4.4"></a>
-  - [4.4](#arrays--from) Для преобразования массиво-подобного объекта в массив используйте оператор расширения `...` вместо [`Array.from`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+  <a name="arrays--from"></a>
+  <a name="arrays--from-iterable"></a><a name="4.4"></a>
+  - [4.4](#arrays--from-iterable) Для преобразования итерируемого объекта в массив используйте оператор расширения `...` вместо [`Array.from`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
     ```javascript
     const foo = document.querySelectorAll('.foo');
@@ -378,8 +379,21 @@
     const nodes = [...foo];
     ```
 
-  <a name="arrays--mapping"></a><a name="4.5"></a>
-  - [4.5](#arrays--mapping) Используйте [Array.from](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/from) вместо оператора расширения `...` для маппинга итерируемых объектов, это позволяет избежать создания промежуточного массива.
+  <a name="arrays--from-array-like"></a>
+  - [4.5](#arrays--from-array-like) Используйте [`Array.from`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/from) для преобразования массивоподобного объекта в массив.
+
+    ```javascript
+    const arrLike = { 0: 'foo', 1: 'bar', 2: 'baz', length: 3 };
+
+    // плохо
+    const arr = Array.prototype.slice.call(arrLike);
+
+    // хорошо
+    const arr = Array.from(arrLike);
+    ```
+
+  <a name="arrays--mapping"></a>
+  - [4.6](#arrays--mapping) Используйте [`Array.from`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/from) вместо оператора расширения `...` для маппинга итерируемых объектов, это позволяет избежать создания промежуточного массива.
 
     ```javascript
     // плохо
@@ -389,8 +403,8 @@
     const baz = Array.from(foo, bar);
     ```
 
-  <a name="arrays--callback-return"></a><a name="4.6"></a>
-  - [4.6](#arrays--callback-return) Используйте операторы `return` внутри функций обратного вызова в методах массива. Можно опустить `return`, когда тело функции состоит из одной инструкции, возврщающей выражение без побочных эффектов. [8.2](#arrows--implicit-return). eslint: [`array-callback-return`](https://eslint.org/docs/rules/array-callback-return)
+  <a name="arrays--callback-return"></a><a name="4.5"></a>
+  - [4.7](#arrays--callback-return) Используйте операторы `return` внутри функций обратного вызова в методах массива. Можно опустить `return`, когда тело функции состоит из одной инструкции, возвращающей выражение без побочных эффектов. [8.2](#arrows--implicit-return). eslint: [`array-callback-return`](https://eslint.org/docs/rules/array-callback-return)
 
     ```javascript
     // хорошо
@@ -400,18 +414,16 @@
     });
 
     // хорошо
-    [1, 2, 3].map(x => x + 1);
+    [1, 2, 3].map((x) => x + 1);
 
     // плохо - нет возвращаемого значения, следовательно, `acc` становится `undefined` после первой итерации
     [[0, 1], [2, 3], [4, 5]].reduce((acc, item, index) => {
       const flatten = acc.concat(item);
-      acc[index] = flatten;
     });
 
     // хорошо
     [[0, 1], [2, 3], [4, 5]].reduce((acc, item, index) => {
       const flatten = acc.concat(item);
-      acc[index] = flatten;
       return flatten;
     });
 
@@ -436,8 +448,8 @@
     });
     ```
 
-  <a name="arrays--bracket-newline"></a><a name="4.7"></a>
-  - [4.7](#arrays--bracket-newline) Если массив располагается на нескольких строках, то используйте разрывы строк после открытия и перед закрытием скобок.
+  <a name="arrays--bracket-newline"></a>
+  - [4.8](#arrays--bracket-newline) Если массив располагается на нескольких строках, то используйте разрывы строк после открытия и перед закрытием скобок.
 
     ```javascript
     // плохо
@@ -520,7 +532,7 @@
   <a name="destructuring--object-over-array"></a><a name="5.3"></a>
   - [5.3](#destructuring--object-over-array) Используйте деструктуризацию объекта для множества возвращаемых значений, но не делайте тоже самое с массивами.
 
-    > Почему? Вы cможете добавить новые свойства через некоторое время или изменить порядок без последствий.
+    > Почему? Вы сможете добавить новые свойства через некоторое время или изменить порядок без последствий.
 
     ```javascript
     // плохо
@@ -581,8 +593,8 @@
     const errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
     ```
 
-  <a name="es6-template-literals"></a><a name="6.3"></a>
-  - [6.3](#es6-template-literals) При создании строки программным путем используйте шаблонные строки вместо конкатенации. eslint: [`prefer-template`](https://eslint.org/docs/rules/prefer-template.html) [`template-curly-spacing`](https://eslint.org/docs/rules/template-curly-spacing)
+  <a name="es6-template-literals"></a><a name="6.4"></a>
+  - [6.3](#es6-template-literals) При создании строки программным путём используйте шаблонные строки вместо конкатенации. eslint: [`prefer-template`](https://eslint.org/docs/rules/prefer-template.html) [`template-curly-spacing`](https://eslint.org/docs/rules/template-curly-spacing)
 
     > Почему? Шаблонные строки дают вам читабельность, лаконичный синтаксис с правильными символами перевода строк и функции интерполяции строки.
 
@@ -608,10 +620,10 @@
     }
     ```
 
-  <a name="strings--eval"></a><a name="6.4"></a>
+  <a name="strings--eval"></a><a name="6.5"></a>
   - [6.4](#strings--eval) Никогда не используйте `eval()`, т.к. это открывает множество уязвимостей. eslint: [`no-eval`](https://eslint.org/docs/rules/no-eval)
 
-  <a name="strings--escaping"></a><a name="6.5"></a>
+  <a name="strings--escaping"></a>
   - [6.5](#strings--escaping) Не используйте в строках необязательные экранирующие символы. eslint: [`no-useless-escape`](https://eslint.org/docs/rules/no-useless-escape)
 
     > Почему? Обратные слеши ухудшают читабельность, поэтому они должны быть только при необходимости.
@@ -632,7 +644,7 @@
   <a name="functions--declarations"></a><a name="7.1"></a>
   - [7.1](#functions--declarations) Используйте функциональные выражения вместо объявлений функций. eslint: [`func-style`](https://eslint.org/docs/rules/func-style)
 
-    > Почему? У объявлений функций есть подъем. Это означает, что можно использовать функцию до того, как она определена в файле, но это вредит читабельности и поддержке. Если вы обнаружили, что определение функции настолько большое или сложное, что мешает понимать остальную часть файла, то, возможно, пришло время извлечь его в отдельный модуль. Не забудьте явно назвать функциональное выражение, независимо от того, подразумевается ли имя из содержащейся переменной (такое часто бывает в современных браузерах или при использовании компиляторов, таких как Babel). Это помогает точнее определять место ошибки по стеку вызовов. ([Обсуждение](https://github.com/airbnb/javascript/issues/794))
+    > Почему? У объявлений функций есть подъём. Это означает, что можно использовать функцию до того, как она определена в файле, но это вредит читабельности и поддержке. Если вы обнаружили, что определение функции настолько большое или сложное, что мешает понимать остальную часть файла, то, возможно, пришло время извлечь его в отдельный модуль. Не забудьте явно назвать функциональное выражение, независимо от того, подразумевается ли имя из содержащейся переменной (такое часто бывает в современных браузерах или при использовании компиляторов, таких как Babel). Это помогает точнее определять место ошибки по стеку вызовов. ([Обсуждение](https://github.com/airbnb/javascript/issues/794))
 
     ```javascript
     // плохо
@@ -655,7 +667,7 @@
   <a name="functions--iife"></a><a name="7.2"></a>
   - [7.2](#functions--iife) Оборачивайте в скобки немедленно вызываемые функции. eslint: [`wrap-iife`](https://eslint.org/docs/rules/wrap-iife.html)
 
-    > Почему? Немедленно вызываемая функция представляет собой единый блок. Чтобы четко показать это — оберните функцию и вызывающие скобки в еще одни скобки. Обратите внимание, что в мире с модулями вам больше не нужны немедленно вызываемые функции.
+    > Почему? Немедленно вызываемая функция представляет собой единый блок. Чтобы чётко показать это — оберните функцию и вызывающие скобки в ещё одни скобки. Обратите внимание, что в мире с модулями вам больше не нужны немедленно вызываемые функции.
 
     ```javascript
     // Немедленно вызываемая функция
@@ -665,7 +677,7 @@
     ```
 
   <a name="functions--in-blocks"></a><a name="7.3"></a>
-  - [7.3](#functions--in-blocks) Никогда не объявляйте фукнции в нефункциональном блоке (`if`, `while`, и т.д.). Вместо этого присвойте функцию переменной. Браузеры позволяют выполнить ваш код, но все они интерпретируют его по-разному. eslint: [`no-loop-func`](https://eslint.org/docs/rules/no-loop-func.html)
+  - [7.3](#functions--in-blocks) Никогда не объявляйте функции в нефункциональном блоке (`if`, `while`, и т.д.). Вместо этого присвойте функцию переменной. Браузеры позволяют выполнить ваш код, но все они интерпретируют его по-разному. eslint: [`no-loop-func`](https://eslint.org/docs/rules/no-loop-func.html)
 
   <a name="functions--note-on-blocks"></a><a name="7.4"></a>
   - [7.4](#functions--note-on-blocks) **Примечание:** ECMA-262 определяет `блок` как список инструкций. Объявление функции не является инструкцией.
@@ -705,7 +717,7 @@
   <a name="es6-rest"></a><a name="7.6"></a>
   - [7.6](#es6-rest) Никогда не используйте `arguments`, вместо этого используйте синтаксис оставшихся параметров `...`. eslint: [`prefer-rest-params`](https://eslint.org/docs/rules/prefer-rest-params)
 
-    > Почему? `...` явно говорит о том, какие именно аргументы вы хотите извлечь. Кроме того, такой синтаксис создает настоящий массив, а не массиво-подобный объект как `arguments`.
+    > Почему? `...` явно говорит о том, какие именно аргументы вы хотите извлечь. Кроме того, такой синтаксис создаёт настоящий массив, а не массивоподобный объект как `arguments`.
 
     ```javascript
     // плохо
@@ -729,12 +741,12 @@
       // Нет! Мы не должны изменять аргументы функции.
       // Плохо вдвойне: если переменная opts будет ложной,
       // то ей присвоится пустой объект, а не то что вы хотели.
-      // Это приведет к коварным ошибкам.
+      // Это приведёт к коварным ошибкам.
       opts = opts || {};
       // ...
     }
 
-    // все еще плохо
+    // всё ещё плохо
     function handleThings(opts) {
       if (opts === void 0) {
         opts = {};
@@ -751,7 +763,7 @@
   <a name="functions--default-side-effects"></a><a name="7.8"></a>
   - [7.8](#functions--default-side-effects) Избегайте побочных эффектов с параметрами по умолчанию.
 
-    > Почему? И так все понятно.
+    > Почему? И так всё понятно.
 
     ```javascript
     var b = 1;
@@ -789,7 +801,7 @@
     // плохо
     var add = new Function('a', 'b', 'return a + b');
 
-    // все еще плохо
+    // всё ещё плохо
     var subtract = Function('a', 'b', 'return a - b');
     ```
 
@@ -915,9 +927,9 @@
   <a name="arrows--use-them"></a><a name="8.1"></a>
   - [8.1](#arrows--use-them) Когда вам необходимо использовать анонимную функцию (например, при передаче встроенной функции обратного вызова), используйте стрелочную функцию. eslint: [`prefer-arrow-callback`](https://eslint.org/docs/rules/prefer-arrow-callback.html), [`arrow-spacing`](https://eslint.org/docs/rules/arrow-spacing.html)
 
-    > Почему? Таким образом создается функция, которая выполняется в контексте `this`, который мы обычно хотим, а также это более короткий синтаксис.
+    > Почему? Таким образом создаётся функция, которая выполняется в контексте `this`, который мы обычно хотим, а также это более короткий синтаксис.
 
-    > Почему бы и нет? Если у вас есть довольно сложная функция, вы можете переместить эту логику внутрь ее собственного именованного функционального выражения.
+    > Почему бы и нет? Если у вас есть довольно сложная функция, вы можете переместить эту логику внутрь её собственного именованного функционального выражения.
 
     ```javascript
     // плохо
@@ -940,13 +952,13 @@
 
     ```javascript
     // плохо
-    [1, 2, 3].map(number => {
+    [1, 2, 3].map((number) => {
       const nextNumber = number + 1;
       `A string containing the ${nextNumber}.`;
     });
 
     // хорошо
-    [1, 2, 3].map(number => `A string containing the ${number}.`);
+    [1, 2, 3].map((number) => `A string containing the ${number + 1}.`);
 
     // хорошо
     [1, 2, 3].map((number) => {
@@ -963,7 +975,7 @@
     function foo(callback) {
       const val = callback();
       if (val === true) {
-        // Сделать что-то, если функция обратного вызова вернет true
+        // Сделать что-то, если функция обратного вызова вернёт true
       }
     }
 
@@ -981,18 +993,18 @@
   <a name="arrows--paren-wrap"></a><a name="8.3"></a>
   - [8.3](#arrows--paren-wrap) В случае, если выражение располагается на нескольких строках, то необходимо обернуть его в скобки для лучшей читаемости.
 
-    > Почему? Это четко показывает, где функция начинается и где заканчивается.
+    > Почему? Это чётко показывает, где функция начинается и где заканчивается.
 
     ```javascript
     // плохо
-    ['get', 'post', 'put'].map(httpMethod => Object.prototype.hasOwnProperty.call(
+    ['get', 'post', 'put'].map((httpMethod) => Object.prototype.hasOwnProperty.call(
         httpMagicObjectWithAVeryLongName,
         httpMethod,
       )
     );
 
     // хорошо
-    ['get', 'post', 'put'].map(httpMethod => (
+    ['get', 'post', 'put'].map((httpMethod) => (
       Object.prototype.hasOwnProperty.call(
         httpMagicObjectWithAVeryLongName,
         httpMethod,
@@ -1001,18 +1013,23 @@
     ```
 
   <a name="arrows--one-arg-parens"></a><a name="8.4"></a>
-  - [8.4](#arrows--one-arg-parens) Если ваша функция принимает один аргумент и не использует фигурные скобки, то опустите круглые скобки. В противном случае, всегда оборачивайте аргументы круглыми скобками для ясности и последовательности. Примечание: также допускается всегда использовать круглые скобки, в этом случае используйте [вариант "always"](https://eslint.org/docs/rules/arrow-parens#always) для eslint. eslint: [`arrow-parens`](https://eslint.org/docs/rules/arrow-parens.html)
-    > Почему? Меньше визуального беспорядка.
+  - [8.4](#arrows--one-arg-parens) Всегда оборачивайте аргументы круглыми скобками для ясности и согласованности. eslint: [`arrow-parens`](https://eslint.org/docs/rules/arrow-parens.html)
+    > Почему? Минимизирует различия при удалении или добавлении аргументы.
 
     ```javascript
     // плохо
-    [1, 2, 3].map((x) => x * x);
-
-    // хорошо
     [1, 2, 3].map(x => x * x);
 
     // хорошо
+    [1, 2, 3].map((x) => x * x);
+
+    // плохо
     [1, 2, 3].map(number => (
+      `A long string with the ${number}. It’s so long that we don’t want it to take up space on the .map line!`
+    ));
+
+    // хорошо
+    [1, 2, 3].map((number) => (
       `A long string with the ${number}. It’s so long that we don’t want it to take up space on the .map line!`
     ));
 
@@ -1034,19 +1051,37 @@
 
     ```javascript
     // плохо
-    const itemHeight = item => item.height > 256 ? item.largeSize : item.smallSize;
+    const itemHeight = (item) => item.height <= 256 ? item.largeSize : item.smallSize;
 
     // плохо
-    const itemHeight = (item) => item.height > 256 ? item.largeSize : item.smallSize;
+    const itemHeight = (item) => item.height >= 256 ? item.largeSize : item.smallSize;
 
     // хорошо
-    const itemHeight = item => (item.height > 256 ? item.largeSize : item.smallSize);
+    const itemHeight = (item) => (item.height <= 256 ? item.largeSize : item.smallSize);
 
     // хорошо
     const itemHeight = (item) => {
       const { height, largeSize, smallSize } = item;
-      return height > 256 ? largeSize : smallSize;
+      return height <= 256 ? largeSize : smallSize;
     };
+    ```
+
+  <a name="whitespace--implicit-arrow-linebreak"></a>
+  - [8.6](#whitespace--implicit-arrow-linebreak) Зафиксируйте расположение тела стрелочной функции с неявным возвратом. eslint: [`implicit-arrow-linebreak`](https://eslint.org/docs/rules/implicit-arrow-linebreak)
+
+    ```javascript
+    // плохо
+    (foo) =>
+      bar;
+    (foo) =>
+      (bar);
+
+    // хорошо
+    (foo) => bar;
+    (foo) => (bar);
+    (foo) => (
+       bar
+    )
     ```
 
 **[⬆ к оглавлению](#Оглавление)**
@@ -1144,7 +1179,7 @@
     ```
 
   <a name="constructors--tostring"></a><a name="9.4"></a>
-  - [9.4](#constructors--tostring) Вы можете определить свой собственный метод `toString()`, просто убедитесь, что он успешно работает и не создает никаких побочных эффектов.
+  - [9.4](#constructors--tostring) Вы можете определить свой собственный метод `toString()`, просто убедитесь, что он успешно работает и не создаёт никаких побочных эффектов.
 
     ```javascript
     class Jedi {
@@ -1191,10 +1226,10 @@
     }
     ```
 
-  <a name="classes--no-duplicate-members"></a><a name="9.6"></a>
+  <a name="classes--no-duplicate-members"></a>
   - [9.6](#classes--no-duplicate-members) Избегайте дублирующих членов класса. eslint: [`no-dupe-class-members`](https://eslint.org/docs/rules/no-dupe-class-members)
 
-    > Почему? Если объявление члена класса повторяется, без предупреждения будет использовано последнее. Наличие дубликатов скорее всего приведет к ошибке.
+    > Почему? Если объявление члена класса повторяется, без предупреждения будет использовано последнее. Наличие дубликатов скорее всего приведёт к ошибке.
 
     ```javascript
     // плохо
@@ -1214,6 +1249,36 @@
     }
     ```
 
+  <a name="classes--methods-use-this"></a>
+  - [9.7](#classes--methods-use-this) Метод класса должен использовать `this` или быть преобразованным в статический метод, если только внешняя библиотека или фреймворк не требуют использования определённых нестатических методов. Будучи методом экземпляра, следует указать, что он ведёт себя по-разному в зависимости от свойств получателя. eslint: [`class-methods-use-this`](https://eslint.org/docs/rules/class-methods-use-this)
+
+    ```javascript
+    // плохо
+    class Foo {
+      bar() {
+        console.log('bar');
+      }
+    }
+    // хорошо - это используется
+    class Foo {
+      bar() {
+        console.log(this.bar);
+      }
+    }
+    // хорошо - конструктор освобождается
+    class Foo {
+      constructor() {
+        // ...
+      }
+    }
+    // хорошо - статические методы не должны использовать это
+    class Foo {
+      static bar() {
+        console.log('bar');
+      }
+    }
+    ```
+
 **[⬆ к оглавлению](#Оглавление)**
 
 ## <a name="modules">Модули</a>
@@ -1221,7 +1286,7 @@
   <a name="modules--use-them"></a><a name="10.1"></a>
   - [10.1](#modules--use-them) Всегда используйте модули (`import`/`export`) вместо нестандартных модульных систем. Вы всегда сможете транспилировать код в вашу любимую модульную систему.
 
-    > Почему? Модули — это будущее. Давайте начнем использовать будущее уже сейчас!
+    > Почему? Модули — это будущее. Давайте начнём использовать будущее уже сейчас!
 
     ```javascript
     // плохо
@@ -1302,7 +1367,7 @@
     export { foo };
     ```
 
-  <a name="modules--prefer-default-export"></a><a name="10.6"></a>
+  <a name="modules--prefer-default-export"></a>
   - [10.6](#modules--prefer-default-export) В модулях с единственным экспортом предпочтительнее использовать экспорт по умолчанию, а не экспорт по имени.
  eslint: [`import/prefer-default-export`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md)
     > Почему? Для того чтобы поощрять создание множества файлов, которые бы экспортировали одну сущность, т.к. это лучше для читабельности и поддержки кода.
@@ -1315,10 +1380,10 @@
     export default function foo() {}
     ```
 
-  <a name="modules--imports-first"></a><a name="10.7"></a>
+  <a name="modules--imports-first"></a>
   - [10.7](#modules--imports-first) Поместите все импорты выше остальных инструкций.
  eslint: [`import/first`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md)
-    > Почему? Так как `import` обладает подъемом, то хранение их всех в начале файла предотвращает от неожиданного поведения.
+    > Почему? Так как `import` обладает подъёмом, то хранение их всех в начале файла предотвращает от неожиданного поведения.
 
     ```javascript
     // плохо
@@ -1334,7 +1399,7 @@
     foo.init();
     ```
 
-  <a name="modules--multiline-imports-over-newlines"></a><a name="10.8"></a>
+  <a name="modules--multiline-imports-over-newlines"></a>
   - [10.8](#modules--multiline-imports-over-newlines) Импорты на нескольких строках должны быть с отступами как у многострочных литералов массива и объекта.
 
     > Почему? Фигурные скобки следуют тем же правилам отступа как и любая другая фигурная скобка блока в этом руководстве, тоже самое касается висячих запятых.
@@ -1353,7 +1418,7 @@
     } from 'path';
     ```
 
-  <a name="modules--no-webpack-loader-syntax"></a><a name="10.9"></a>
+  <a name="modules--no-webpack-loader-syntax"></a>
   - [10.9](#modules--no-webpack-loader-syntax) Запретите синтаксис загрузчика Webpack в импорте.
  eslint: [`import/no-webpack-loader-syntax`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md)
     > Почему? Использование Webpack синтаксиса связывает код с упаковщиком модулей. Предпочтительно использовать синтаксис загрузчика в `webpack.config.js`.
@@ -1408,12 +1473,12 @@
 
     // хорошо
     const increasedByOne = [];
-    numbers.forEach((num) => { 
+    numbers.forEach((num) => {
       increasedByOne.push(num + 1);
     });
 
     // отлично (продолжайте в том же духе)
-    const increasedByOne = numbers.map(num => num + 1);
+    const increasedByOne = numbers.map((num) => num + 1);
     ```
 
   <a name="generators--nope"></a><a name="11.2"></a>
@@ -1422,7 +1487,7 @@
     > Почему? Они не очень хорошо транспилируются в ES5.
 
   <a name="generators--spacing"></a>
-  - [11.3](#generators--spacing) Если все-таки необходимо использовать генераторы, или вы не обратили внимания на [наш совет](#generators--nope), убедитесь, что `*` у функции генератора расположена должным образом. eslint: [`generator-star-spacing`](https://eslint.org/docs/rules/generator-star-spacing)
+  - [11.3](#generators--spacing) Если всё-таки необходимо использовать генераторы, или вы не обратили внимания на [наш совет](#generators--nope), убедитесь, что `*` у функции генератора расположена должным образом. eslint: [`generator-star-spacing`](https://eslint.org/docs/rules/generator-star-spacing)
 
     > Почему? `function` и `*` являются частью одного и того же ключевого слова. `*` не является модификатором для `function`, `function*` является уникальной конструкцией, отличной от `function`.
 
@@ -1511,7 +1576,7 @@
     const isJedi = getProp('jedi');
     ```
 
-  <a name="es2016-properties--exponentiation-operator"></a><a name="12.3"></a>
+  <a name="es2016-properties--exponentiation-operator"></a>
   - [12.3](#es2016-properties--exponentiation-operator) Используйте оператор `**` для возведения в степень. eslint: [`no-restricted-properties`](https://eslint.org/docs/rules/no-restricted-properties).
 
     ```javascript
@@ -1527,7 +1592,7 @@
 ## <a name="variables">Переменные</a>
 
   <a name="variables--const"></a><a name="13.1"></a>
-  - [13.1](#variables--const) Всегда используйте `const` или `let` для объявления переменных. Невыполнение этого требования приведет к появлению глобальных переменных. Необходимо избегать загрязнения глобального пространства имен. eslint: [`no-undef`](https://eslint.org/docs/rules/no-undef) [`prefer-const`](https://eslint.org/docs/rules/prefer-const)
+  - [13.1](#variables--const) Всегда используйте `const` или `let` для объявления переменных. Невыполнение этого требования приведёт к появлению глобальных переменных. Необходимо избегать загрязнения глобального пространства имён. eslint: [`no-undef`](https://eslint.org/docs/rules/no-undef) [`prefer-const`](https://eslint.org/docs/rules/prefer-const)
 
     ```javascript
     // плохо
@@ -1538,9 +1603,9 @@
     ```
 
   <a name="variables--one-const"></a><a name="13.2"></a>
-  - [13.2](#variables--one-const) Используйте объявление `const` или `let` для каждой переменной. eslint: [`one-var`](https://eslint.org/docs/rules/one-var.html)
+  - [13.2](#variables--one-const) Используйте объявление `const` или `let` для каждой переменной или присвоения. eslint: [`one-var`](https://eslint.org/docs/rules/one-var.html)
 
-    > Почему? Таким образом проще добавить новые переменные. Также вы никогда не будете беспокоиться о перемещении `;` и `,` и об отображении изменений в пунктуации. Вы также можете пройтись по каждому объявлению с помощью откладчика, вместо того, чтобы прыгать через все сразу.
+    > Почему? Таким образом проще добавить новые переменные. Также вы никогда не будете беспокоиться о перемещении `;` и `,` и об отображении изменений в пунктуации. Вы также можете пройтись по каждому объявлению с помощью отладчика, вместо того, чтобы прыгать через все сразу.
 
     ```javascript
     // плохо
@@ -1691,9 +1756,9 @@
     const truthyCount = array.filter(Boolean).length;
     ```
 
-  <a name="variables--linebreak"></a><a name="13.7"></a>
+  <a name="variables--linebreak"></a>
   - [13.7](#variables--linebreak) В присвоении избегайте разрывов строк до и после `=`. Если ваше присвоение нарушает правило [`max-len`](https://eslint.org/docs/rules/max-len.html), оберните значение в круглые скобки. eslint [`operator-linebreak`](https://eslint.org/docs/rules/operator-linebreak.html).
-  
+
     > Почему? Разрывы строк до и после `=` могут приводить к путанице в понимании значения.
 
     ```javascript
@@ -1714,10 +1779,10 @@
     const foo = 'superLongLongLongLongLongLongLongLongString';
     ```
 
-<a name="variables--no-unused-vars"></a>
- - [13.8](#variables--no-unused-vars) Запретить неиспользуемые переменные. eslint: [`no-unused-vars`](https://eslint.org/docs/rules/no-unused-vars)
+  <a name="variables--no-unused-vars"></a>
+  - [13.8](#variables--no-unused-vars) Запретить неиспользуемые переменные. eslint: [`no-unused-vars`](https://eslint.org/docs/rules/no-unused-vars)
 
-    > Почему? Переменные, которые объявлены и не используются в коде, скорее всего, являются ошибкой из-за незавершенного рефакторинга. Такие переменные занимают место в коде и могут привести к путанице при чтении.
+    > Почему? Переменные, которые объявлены и не используются в коде, скорее всего, являются ошибкой из-за незавершённого рефакторинга. Такие переменные занимают место в коде и могут привести к путанице при чтении.
 
     ```javascript
     // плохо
@@ -1756,10 +1821,10 @@
 
 **[⬆ к оглавлению](#Оглавление)**
 
-## <a name="hoisting">Подъем</a>
+## <a name="hoisting">Подъём</a>
 
   <a name="hoisting--about"></a><a name="14.1"></a>
-  - [14.1](#hoisting--about) Объявления `var` поднимаются в начало области видимости ближайшей закрывающей их функции, а их присвоение нет. Объявления `const` и `let` работают по новой концепции называемой [Временные Мертвые Зоны (Temporal Dead Zone)](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let#Временные_мертвые_зоны_и_ошибки_при_использовании_let). Важно знать, почему использовать [typeof больше не безопасно](http://es-discourse.com/t/why-typeof-is-no-longer-safe/15).
+  - [14.1](#hoisting--about) Объявления `var` поднимаются в начало области видимости ближайшей закрывающей их функции, а их присвоение нет. Объявления `const` и `let` работают по новой концепции называемой [Временные Мёртвые Зоны (Temporal Dead Zone)](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let#Временные_мертвые_зоны_и_ошибки_при_использовании_let). Важно знать, почему использовать [typeof больше не безопасно](http://es-discourse.com/t/why-typeof-is-no-longer-safe/15).
 
     ```javascript
     // мы знаем, что это не будет работать
@@ -1768,8 +1833,8 @@
       console.log(notDefined); // => выбросит ошибку ReferenceError
     }
 
-    // обращение к переменной до ее создания
-    // будет работать из-за подъема.
+    // обращение к переменной до её создания
+    // будет работать из-за подъёма.
     // Примечание: значение true не поднимается.
     function example() {
       console.log(declaredButNotAssigned); // => undefined
@@ -1795,7 +1860,7 @@
     ```
 
   <a name="hoisting--anon-expressions"></a><a name="14.2"></a>
-  - [14.2](#hoisting--anon-expressions) Для анонимных функциональных выражений наверх области видимости поднимается название переменной, но не ее значение.
+  - [14.2](#hoisting--anon-expressions) Для анонимных функциональных выражений наверх области видимости поднимается название переменной, но не её значение.
 
     ```javascript
     function example() {
@@ -1839,7 +1904,7 @@
     ```
 
   <a name="hoisting--declarations"></a><a name="14.4"></a>
-  - [14.4](#hoisting--declarations) При объявлении функции ее имя и тело поднимаются наверх области видимости.
+  - [14.4](#hoisting--declarations) При объявлении функции её имя и тело поднимаются наверх области видимости.
 
     ```javascript
     function example() {
@@ -1861,7 +1926,7 @@
   - [15.1](#comparison--eqeqeq) Используйте `===` и `!==` вместо `==` и `!=`. eslint: [`eqeqeq`](https://eslint.org/docs/rules/eqeqeq.html)
 
   <a name="comparison--if"></a><a name="15.2"></a>
-  - [15.2](#comparison--if) Условные операторы, такие как `if`, вычисляются путем приведения к логическому типу `Boolean` через абстрактный метод `ToBoolean` и всегда следуют следующим правилам:
+  - [15.2](#comparison--if) Условные операторы, такие как `if`, вычисляются путём приведения к логическому типу `Boolean` через абстрактный метод `ToBoolean` и всегда следуют следующим правилам:
     - **Object** соответствует **true**
     - **Undefined** соответствует **false**
     - **Null** соответствует **false**
@@ -1997,8 +2062,8 @@
     const baz = !c;
     ```
 
-  <a name="comparison--no-mixed-operators"></a><a name="15.8"></a>
-  - [15.8](#comparison--no-mixed-operators) При смешивании операторов, помещайте их в круглые скобки. Единственное исключение — это стандартные арифметические операторы (`+`, `-`, `*` и `/`), так как их приоритет широко известен. eslint: [`no-mixed-operators`](https://eslint.org/docs/rules/no-mixed-operators.html)
+  <a name="comparison--no-mixed-operators"></a>
+  - [15.8](#comparison--no-mixed-operators) При смешивании операторов, помещайте их в круглые скобки. Единственным исключением являются стандартные арифметические операторы: `+`, `-` и `**`, так как их приоритет широко известен. Мы рекомендуем заключить `/` и `*` в круглые скобки, поскольку их приоритет может быть неоднозначным, когда они смешиваются. eslint: [`no-mixed-operators`](https://eslint.org/docs/rules/no-mixed-operators.html)
 
     > Почему? Это улучшает читаемость и уточняет намерения разработчика.
 
@@ -2015,11 +2080,14 @@
       return d;
     }
 
+    // плохо
+    const bar = a + b / c * d;
+
     // хорошо
     const foo = (a && b < 0) || c > 0 || (d + 1 === 0);
 
     // хорошо
-    const bar = (a ** b) - (5 % d);
+    const bar = a ** b - (5 % d);
 
     // хорошо
     if (a || (b && c)) {
@@ -2027,7 +2095,7 @@
     }
 
     // хорошо
-    const bar = a + b / c * d;
+    const bar = a + (b / c) * d;
     ```
 
 **[⬆ к оглавлению](#Оглавление)**
@@ -2082,7 +2150,7 @@
     ```
 
   <a name="blocks--no-else-return"></a><a name="16.3"></a>
-  - [16.3](#blocks--no-else-return) Если в блоке `if` всегда выполняется оператор `return`, последующий блок `else` не нужен. `return`  внутри блока `else if`, следующем за блоком `if`, который содержит `return`, может быть разделен на несколько блоков `if`. eslint: [`no-else-return`](https://eslint.org/docs/rules/no-else-return)
+  - [16.3](#blocks--no-else-return) Если в блоке `if` всегда выполняется оператор `return`, последующий блок `else` не нужен. `return`  внутри блока `else if`, следующем за блоком `if`, который содержит `return`, может быть разделён на несколько блоков `if`. eslint: [`no-else-return`](https://eslint.org/docs/rules/no-else-return)
 
     ```javascript
     // плохо
@@ -2150,7 +2218,7 @@
 
 ## <a name="control-statements">Управляющие операторы</a>
 
-  <a name="control-statements"></a><a name="17.1"></a>
+  <a name="control-statements"></a>
   - [17.1](#control-statements) Если ваш управляющий оператор (`if`, `while` и т.д.) слишком длинный или превышает максимальную длину строки, то каждое (сгруппированное) условие можно поместить на новую строку. Логический оператор должен располагаться в начале строки.
 
     > Почему? Наличие операторов в начале строки приводит к выравниванию операторов и напоминает цепочку методов. Это также улучшает читаемость, упрощая визуальное отслеживание сложной логики.
@@ -2204,9 +2272,8 @@
     }
     ```
 
-  <a name="control-statement--value-selection"></a>
+  <a name="control-statement--value-selection"></a><a name="control-statements--value-selection"></a>
   - [17.2](#control-statements--value-selection) Не используйте операторы выбора вместо управляющих операторов.
-
 
     ```javascript
     // плохо
@@ -2222,7 +2289,7 @@
 
 ## <a name="comments">Комментарии</a>
 
-  <a name="comments--multiline"></a><a name="18.1"></a>
+  <a name="comments--multiline"></a><a name="17.1"></a>
   - [18.1](#comments--multiline) Используйте конструкцию `/** ... */` для многострочных комментариев.
 
     ```javascript
@@ -2252,8 +2319,8 @@
     }
     ```
 
-  <a name="comments--singleline"></a><a name="18.2"></a>
-  - [18.2](#comments--singleline) Используйте двойной слэш `//` для однострочных комментариев. Располагайте такие комментарии отдельной строкой над кодом, который хотите пояснить. Если комментарий не является первой строкой блока, добавьте сверху пустую строку.
+  <a name="comments--singleline"></a><a name="17.2"></a>
+  - [18.2](#comments--singleline) Используйте двойной слеш `//` для однострочных комментариев. Располагайте такие комментарии отдельной строкой над кодом, который хотите пояснить. Если комментарий не является первой строкой блока, добавьте сверху пустую строку.
 
     ```javascript
     // плохо
@@ -2291,7 +2358,7 @@
     }
     ```
 
-  <a name="comments--spaces"></a><a name="18.3"></a>
+  <a name="comments--spaces"></a>
   - [18.3](#comments--spaces) Начинайте все комментарии с пробела, так их проще читать. eslint: [`spaced-comment`](https://eslint.org/docs/rules/spaced-comment)
 
     ```javascript
@@ -2328,10 +2395,10 @@
     }
     ```
 
-  <a name="comments--actionitems"></a><a name="18.4"></a>
+  <a name="comments--actionitems"></a><a name="17.3"></a>
   - [18.4](#comments--actionitems) Если комментарий начинается со слов `FIXME` или `TODO`, то это помогает другим разработчикам быстро понять, когда вы хотите указать на проблему, которую надо решить, или когда вы предлагаете решение проблемы, которое надо реализовать. Такие комментарии, в отличие от обычных, побуждают к действию: `FIXME: -- нужно разобраться с этим` или `TODO: -- нужно реализовать`.
 
-  <a name="comments--fixme"></a><a name="18.5"></a>
+  <a name="comments--fixme"></a><a name="17.4"></a>
   - [18.5](#comments--fixme) Используйте `// FIXME:`, чтобы описать проблему.
 
     ```javascript
@@ -2345,7 +2412,7 @@
     }
     ```
 
-  <a name="comments--todo"></a><a name="18.6"></a>
+  <a name="comments--todo"></a><a name="17.5"></a>
   - [18.6](#comments--todo) Используйте `// TODO:`, чтобы описать решение проблемы.
 
     ```javascript
@@ -2363,7 +2430,7 @@
 
 ## <a name="whitespace">Пробелы</a>
 
-  <a name="whitespace--spaces"></a><a name="19.1"></a>
+  <a name="whitespace--spaces"></a><a name="18.1"></a>
   - [19.1](#whitespace--spaces) Используйте мягкую табуляцию (символ пробела) шириной в 2 пробела. eslint: [`indent`](https://eslint.org/docs/rules/indent.html)
 
     ```javascript
@@ -2383,7 +2450,7 @@
     }
     ```
 
-  <a name="whitespace--before-blocks"></a><a name="19.2"></a>
+  <a name="whitespace--before-blocks"></a><a name="18.2"></a>
   - [19.2](#whitespace--before-blocks) Ставьте 1 пробел перед открывающей фигурной скобкой у блока. eslint: [`space-before-blocks`](https://eslint.org/docs/rules/space-before-blocks.html)
 
     ```javascript
@@ -2410,7 +2477,7 @@
     });
     ```
 
-  <a name="whitespace--around-keywords"></a><a name="19.3"></a>
+  <a name="whitespace--around-keywords"></a><a name="18.3"></a>
   - [19.3](#whitespace--around-keywords) Ставьте 1 пробел перед открывающей круглой скобкой в операторах управления (`if`, `while` и т.п.). Не оставляйте пробелов между списком аргументов и названием в объявлениях и вызовах функций. eslint: [`keyword-spacing`](https://eslint.org/docs/rules/keyword-spacing.html)
 
     ```javascript
@@ -2435,7 +2502,7 @@
     }
     ```
 
-  <a name="whitespace--infix-ops"></a><a name="19.4"></a>
+  <a name="whitespace--infix-ops"></a><a name="18.4"></a>
   - [19.4](#whitespace--infix-ops) Разделяйте операторы пробелами. eslint: [`space-infix-ops`](https://eslint.org/docs/rules/space-infix-ops.html)
 
     ```javascript
@@ -2446,7 +2513,7 @@
     const x = y + 5;
     ```
 
-  <a name="whitespace--newline-at-end"></a><a name="19.5"></a>
+  <a name="whitespace--newline-at-end"></a><a name="18.5"></a>
   - [19.5](#whitespace--newline-at-end) В конце файла оставляйте одну пустую строку. eslint: [`eol-last`](https://github.com/eslint/eslint/blob/master/docs/rules/eol-last.md)
 
     ```javascript
@@ -2471,8 +2538,8 @@
     export default es6;↵
     ```
 
-  <a name="whitespace--chains"></a><a name="19.6"></a>
-  - [19.6](#whitespace--chains) Используйте переносы строк и отступы, когда делаете длинные цепочки методов (больше 2-х методов). Ставьте точку в начале строки, чтобы дать понять, что это не новая инструкция, а продолжение цепочки. eslint: [`newline-per-chained-call`](https://eslint.org/docs/rules/newline-per-chained-call) [`no-whitespace-before-property`](https://eslint.org/docs/rules/no-whitespace-before-property)
+  <a name="whitespace--chains"></a><a name="18.6"></a>
+  - [19.6](#whitespace--chains) Используйте переносы строк и отступы, когда делаете длинные цепочки методов (больше 2 методов). Ставьте точку в начале строки, чтобы дать понять, что это не новая инструкция, а продолжение цепочки. eslint: [`newline-per-chained-call`](https://eslint.org/docs/rules/newline-per-chained-call) [`no-whitespace-before-property`](https://eslint.org/docs/rules/no-whitespace-before-property)
 
     ```javascript
     // плохо
@@ -2514,7 +2581,7 @@
     const leds = stage.selectAll('.led').data(data);
     ```
 
-  <a name="whitespace--after-blocks"></a><a name="19.7"></a>
+  <a name="whitespace--after-blocks"></a><a name="18.7"></a>
   - [19.7](#whitespace--after-blocks) Оставляйте пустую строку между блоком кода и следующей инструкцией.
 
     ```javascript
@@ -2572,7 +2639,7 @@
     return arr;
     ```
 
-  <a name="whitespace--padded-blocks"></a><a name="19.8"></a>
+  <a name="whitespace--padded-blocks"></a><a name="18.8"></a>
   - [19.8](#whitespace--padded-blocks) Не добавляйте отступы до или после кода внутри блока. eslint: [`padded-blocks`](https://eslint.org/docs/rules/padded-blocks.html)
 
     ```javascript
@@ -2583,7 +2650,7 @@
 
     }
 
-    // also bad
+    // тоже плохо
     if (baz) {
 
       console.log(qux);
@@ -2605,8 +2672,62 @@
     }
     ```
 
-  <a name="whitespace--in-parens"></a><a name="19.9"></a>
-  - [19.9](#whitespace--in-parens) Не добавляйте пробелы между круглыми скобками и их содержимым. eslint: [`space-in-parens`](https://eslint.org/docs/rules/space-in-parens.html)
+  <a name="whitespace--no-multiple-blanks"></a>
+  - [19.9](#whitespace--no-multiple-blanks) Не используйте множество пустых строк для заполнения кода. eslint: [`no-multiple-empty-lines`](https://eslint.org/docs/rules/no-multiple-empty-lines)
+
+    <!-- markdownlint-disable MD012 -->
+    ```javascript
+    // плохо
+    class Person {
+      constructor(fullName, email, birthday) {
+        this.fullName = fullName;
+
+
+        this.email = email;
+
+
+        this.setAge(birthday);
+      }
+
+
+      setAge(birthday) {
+        const today = new Date();
+
+
+        const age = this.getAge(today, birthday);
+
+
+        this.age = age;
+      }
+
+
+      getAge(today, birthday) {
+        // ..
+      }
+    }
+
+    // good
+    class Person {
+      constructor(fullName, email, birthday) {
+        this.fullName = fullName;
+        this.email = email;
+        this.setAge(birthday);
+      }
+
+      setAge(birthday) {
+        const today = new Date();
+        const age = getAge(today, birthday);
+        this.age = age;
+      }
+
+      getAge(today, birthday) {
+        // ..
+      }
+    }
+    ```
+
+  <a name="whitespace--in-parens"></a><a name="18.9"></a>
+  - [19.10](#whitespace--in-parens) Не добавляйте пробелы между круглыми скобками и их содержимым. eslint: [`space-in-parens`](https://eslint.org/docs/rules/space-in-parens.html)
 
     ```javascript
     // плохо
@@ -2630,8 +2751,8 @@
     }
     ```
 
-  <a name="whitespace--in-brackets"></a><a name="19.10"></a>
-  - [19.10](#whitespace--in-brackets) Не добавляйте пробелы между квадратными скобками и их содержимым. eslint: [`array-bracket-spacing`](https://eslint.org/docs/rules/array-bracket-spacing.html)
+  <a name="whitespace--in-brackets"></a><a name="18.10"></a>
+  - [19.11](#whitespace--in-brackets) Не добавляйте пробелы между квадратными скобками и их содержимым. eslint: [`array-bracket-spacing`](https://eslint.org/docs/rules/array-bracket-spacing.html)
 
     ```javascript
     // плохо
@@ -2643,8 +2764,8 @@
     console.log(foo[0]);
     ```
 
-  <a name="whitespace--in-braces"></a><a name="19.11"></a>
-  - [19.11](#whitespace--in-braces) Добавляйте пробелы между фигурными скобками и их содержимым. eslint: [`object-curly-spacing`](https://eslint.org/docs/rules/object-curly-spacing.html)
+  <a name="whitespace--in-braces"></a><a name="18.11"></a>
+  - [19.12](#whitespace--in-braces) Добавляйте пробелы между фигурными скобками и их содержимым. eslint: [`object-curly-spacing`](https://eslint.org/docs/rules/object-curly-spacing.html)
 
     ```javascript
     // плохо
@@ -2654,8 +2775,8 @@
     const foo = { clark: 'kent' };
     ```
 
-  <a name="whitespace--max-len"></a><a name="19.12"></a>
-  - [19.12](#whitespace--max-len) Старайтесь не допускать, чтобы строки были длиннее 100 символов (включая пробелы). Замечание: согласно [пункту выше](#strings--line-length), длинные строки с текстом освобождаются от этого правила и не должны разбиваться на несколько строк. eslint: [`max-len`](https://eslint.org/docs/rules/max-len.html)
+  <a name="whitespace--max-len"></a><a name="18.12"></a>
+  - [19.13](#whitespace--max-len) Старайтесь не допускать, чтобы строки были длиннее 100 символов (включая пробелы). Замечание: согласно [пункту выше](#strings--line-length), длинные строки с текстом освобождаются от этого правила и не должны разбиваться на несколько строк. eslint: [`max-len`](https://eslint.org/docs/rules/max-len.html)
 
     > Почему? Это обеспечивает удобство чтения и поддержки кода.
 
@@ -2684,11 +2805,111 @@
       .fail(() => console.log('You have failed this city.'));
     ```
 
+  <a name="whitespace--block-spacing"></a>
+  - [19.14](#whitespace--block-spacing) Требуйте согласованного расстояния между открывающим символом блока и следующим символом на одной и той же строке. Тоже самое касается расстояния между закрывающим символом блока и предыдущим символом. eslint: [`block-spacing`](https://eslint.org/docs/rules/block-spacing)
+
+    ```javascript
+    // плохо
+    function foo() {return true;}
+    if (foo) { bar = 0;}
+
+    // хорошо
+    function foo() { return true; }
+    if (foo) { bar = 0; }
+    ```
+
+  <a name="whitespace--comma-spacing"></a>
+  - [19.15](#whitespace--comma-spacing) Избегайте пробелов перед запятыми и ставьте его после. eslint: [`comma-spacing`](https://eslint.org/docs/rules/comma-spacing)
+
+    ```javascript
+    // плохо
+    var foo = 1,bar = 2;
+    var arr = [1 , 2];
+
+    // хорошо
+    var foo = 1, bar = 2;
+    var arr = [1, 2];
+    ```
+
+  <a name="whitespace--computed-property-spacing"></a>
+  - [19.16](#whitespace--computed-property-spacing) Избегайте пробелов внутри скобок вычисляемого свойства. eslint: [`computed-property-spacing`](https://eslint.org/docs/rules/computed-property-spacing)
+
+    ```javascript
+    // плохо
+    obj[foo ]
+    obj[ 'foo']
+    var x = {[ b ]: a}
+    obj[foo[ bar ]]
+
+    // хорошо
+    obj[foo]
+    obj['foo']
+    var x = { [b]: a }
+    obj[foo[bar]]
+    ```
+
+  <a name="whitespace--func-call-spacing"></a>
+  - [19.17](#whitespace--func-call-spacing) Избегайте пробелов между функциями и их вызовами. eslint: [`func-call-spacing`](https://eslint.org/docs/rules/func-call-spacing)
+
+    ```javascript
+    // плохо
+    func ();
+
+    func
+    ();
+
+    // хорошо
+    func();
+    ```
+
+  <a name="whitespace--key-spacing"></a>
+  - [19.18](#whitespace--key-spacing) Обеспечьте согласованное расстояние между ключами и значениями в свойствах литералов объекта. eslint: [`key-spacing`](https://eslint.org/docs/rules/key-spacing)
+
+    ```javascript
+    // плохо
+    var obj = { "foo" : 42 };
+    var obj2 = { "foo":42 };
+
+    // хорошо
+    var obj = { "foo": 42 };
+    ```
+
+  <a name="whitespace--no-trailing-spaces"></a>
+  - [19.19](#whitespace--no-trailing-spaces) Избегайте пробелов в конце строки. eslint: [`no-trailing-spaces`](https://eslint.org/docs/rules/no-trailing-spaces)
+
+  <a name="whitespace--no-multiple-empty-lines"></a>
+  - [19.20](#whitespace--no-multiple-empty-lines) Избегайте множества пустых строк и новой строки в начале файлов. Разрешайте только одну пустую строку в конце файла. eslint: [`no-multiple-empty-lines`](https://eslint.org/docs/rules/no-multiple-empty-lines)
+
+    <!-- markdownlint-disable MD012 -->
+    ```javascript
+    // плохо - множество пустых строк
+    var x = 1;
+
+
+    var y = 2;
+
+    // плохо - 2+ новых строк в конце файла
+    var x = 1;
+    var y = 2;
+
+
+    // плохо - 1+ новая строка в начале файла
+
+    var x = 1;
+    var y = 2;
+
+    // хорошо
+    var x = 1;
+    var y = 2;
+
+    ```
+    <!-- markdownlint-enable MD012 -->
+
 **[⬆ к оглавлению](#Оглавление)**
 
 ## <a name="commas">Запятые</a>
 
-  <a name="commas--leading-trailing"></a><a name="20.1"></a>
+  <a name="commas--leading-trailing"></a><a name="19.1"></a>
   - [20.1](#commas--leading-trailing) Не начинайте строку с запятой. eslint: [`comma-style`](https://eslint.org/docs/rules/comma-style.html)
 
     ```javascript
@@ -2723,10 +2944,10 @@
     };
     ```
 
-  <a name="commas--dangling"></a><a name="20.2"></a>
+  <a name="commas--dangling"></a><a name="19.2"></a>
   - [20.2](#commas--dangling) Добавляйте висячие запятые. eslint: [`comma-dangle`](https://eslint.org/docs/rules/comma-dangle.html)
 
-    > Почему? Такой подход дает понятную разницу при просмотре изменений. Кроме того, транспиляторы типа Babel удалят висячие запятые из собранного кода, поэтому вы можете не беспокоиться о [проблемах](https://github.com/airbnb/javascript/blob/es5-deprecated/es5/README.md#commas) в старых браузерах.
+    > Почему? Такой подход даёт понятную разницу при просмотре изменений. Кроме того, транспиляторы типа Babel удалят висячие запятые из собранного кода, поэтому вы можете не беспокоиться о [проблемах](https://github.com/airbnb/javascript/blob/es5-deprecated/es5/README.md#commas) в старых браузерах.
 
     ```diff
     // плохо - git diff без висячей запятой
@@ -2786,7 +3007,7 @@
       // ничего не делает
     }
 
-    // хорошо (обратите внимание, что висячей запятой не должно быть после "rest"-параметра)
+    // хорошо (обратите внимание, что висячей запятой не должно быть после rest-параметра)
     function createHero(
       firstName,
       lastName,
@@ -2810,7 +3031,7 @@
       inventorOf,
     );
 
-    // хорошо (обратите внимание, что висячей запятой не должно быть после "rest"-аргумента)
+    // хорошо (обратите внимание, что висячей запятой не должно быть после rest-аргумента)
     createHero(
       firstName,
       lastName,
@@ -2823,19 +3044,19 @@
 
 ## <a name="semicolons">Точка с запятой</a>
 
-  <a name="semicolons--required"></a><a name="21.1"></a>
+  <a name="semicolons--required"></a><a name="20.1"></a>
   - [21.1](#semicolons--required) **Да.** eslint: [`semi`](https://eslint.org/docs/rules/semi.html)
 
-    > Почему? Когда JavaScript встречает перенос строки без точки с запятой, он ипользует правило под названием [Автоматическая Вставка Точки с запятой (Automatic Semicolon Insertion)](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion), чтобы определить, стоит ли считать этот перенос строки как конец выражения и (как следует из названия) поместить точку с запятой в вашем коде до переноса строки. Однако, ASI содержит несколько странных форм поведения, и ваш код может быть сломан, если JavaScript неверно истолкует ваш перенос строки. Эти правила станут сложнее, когда новые возможности станут частью JavaScript. Явное завершение ваших выражений и настройка вашего линтера для улавливания пропущенных точек с запятыми помогут вам предотвратить возникновение проблем.
+    > Почему? Когда JavaScript встречает перенос строки без точки с запятой, он использует правило под названием [Автоматическая Вставка Точки с запятой (Automatic Semicolon Insertion)](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion), чтобы определить, стоит ли считать этот перенос строки как конец выражения и (как следует из названия) поместить точку с запятой в вашем коде до переноса строки. Однако, ASI содержит несколько странных форм поведения, и ваш код может быть сломан, если JavaScript неверно истолкует ваш перенос строки. Эти правила станут сложнее, когда новые возможности станут частью JavaScript. Явное завершение ваших выражений и настройка вашего линтера для улавливания пропущенных точек с запятыми помогут вам предотвратить возникновение проблем.
 
     ```javascript
     // плохо - выбрасывает исключение
     const luke = {}
     const leia = {}
-    [luke, leia].forEach(jedi => jedi.father = 'vader')
+    [luke, leia].forEach((jedi) => jedi.father = 'vader')
 
     // плохо - выбрасывает исключение
-    const reaction = "No! That's impossible!"
+    const reaction = "No! That’s impossible!"
     (async function meanwhileOnTheFalcon() {
       // переносимся к `leia`, `lando`, `chewie`, `r2`, `c3p0`
       // ...
@@ -2855,7 +3076,7 @@
     });
 
     // хорошо
-    const reaction = "No! That's impossible!";
+    const reaction = "No! That’s impossible!";
     (async function meanwhileOnTheFalcon() {
       // переносимся к `leia`, `lando`, `chewie`, `r2`, `c3p0`
       // ...
@@ -2873,10 +3094,10 @@
 
 ## <a name="type-casting--coercion">Приведение типов</a>
 
-  <a name="coercion--explicit"></a><a name="22.1"></a>
+  <a name="coercion--explicit"></a><a name="21.1"></a>
   - [22.1](#coercion--explicit) Выполняйте приведение типов в начале инструкции.
 
-  <a name="coercion--strings"></a><a name="22.2"></a>
+  <a name="coercion--strings"></a><a name="21.2"></a>
   - [22.2](#coercion--strings) Строки: eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
 
     ```javascript
@@ -2889,13 +3110,13 @@
     const totalScore = this.reviewScore + ''; // вызывает this.reviewScore.valueOf()
 
     // плохо
-    const totalScore = this.reviewScore.toString(); // нет гарантии что вернется строка
+    const totalScore = this.reviewScore.toString(); // нет гарантии что вернётся строка
 
     // хорошо
     const totalScore = String(this.reviewScore);
     ```
 
-  <a name="coercion--numbers"></a><a name="22.3"></a>
+  <a name="coercion--numbers"></a><a name="21.3"></a>
   - [22.3](#coercion--numbers) Числа: Используйте `Number` и `parseInt` с основанием системы счисления. eslint: [`radix`](https://eslint.org/docs/rules/radix) [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
 
     ```javascript
@@ -2920,21 +3141,21 @@
     const val = parseInt(inputValue, 10);
     ```
 
-  <a name="coercion--comment-deviations"></a><a name="22.4"></a>
-  - [22.4](#coercion--comment-deviations) Если по какой-то причине вы делаете что-то настолько безумное, что `parseInt` является слабым местом и вам нужно использовать побитовый сдвиг из-за [вопросов производительности](https://jsperf.com/coercion-vs-casting/3), оставьте комментарий объясняющий почему и что вы делаете.
+  <a name="coercion--comment-deviations"></a><a name="21.4"></a>
+  - [22.4](#coercion--comment-deviations) Если по какой-то причине вы делаете что-то настолько безумное, что `parseInt` является слабым местом и вам нужно использовать побитовый сдвиг из-за [вопросов производительности](https://jsperf.com/coercion-vs-casting/3), оставьте комментарий, объясняющий почему и что вы делаете.
 
     ```javascript
     // хорошо
     /**
      * этот код медленно работал из-за parseInt.
-     * побитовый сдвиг строки для приведения ее к числу
+     * побитовый сдвиг строки для приведения её к числу
      * работает значительно быстрее.
      */
     const val = inputValue >> 0;
     ```
 
-  <a name="coercion--bitwise"></a><a name="22.5"></a>
-  - [22.5](#coercion--bitwise) **Примечание:** Будьте осторожны с побитовыми операциями. Числа в JavaScript являются [64-битными значениями](https://es5.github.io/#x4.3.19), но побитовые операции всегда возвращают 32-битные значенения ([источник](https://es5.github.io/#x11.7)). Побитовый сдвиг может привести к неожиданному поведению для значений больше, чем 32 бита. [Discussion](https://github.com/airbnb/javascript/issues/109). Верхний предел — 2 147 483 647:
+  <a name="coercion--bitwise"></a><a name="21.5"></a>
+  - [22.5](#coercion--bitwise) **Примечание:** Будьте осторожны с побитовыми операциями. Числа в JavaScript являются [64-битными значениями](https://es5.github.io/#x4.3.19), но побитовые операции всегда возвращают 32-битные значения ([источник](https://es5.github.io/#x11.7)). Побитовый сдвиг может привести к неожиданному поведению для значений больше, чем 32 бита. [Обсуждение](https://github.com/airbnb/javascript/issues/109). Верхний предел — 2&nbsp;147&nbsp;483&nbsp;647:
 
     ```javascript
     2147483647 >> 0; // => 2147483647
@@ -2942,7 +3163,7 @@
     2147483649 >> 0; // => -2147483647
     ```
 
-  <a name="coercion--booleans"></a><a name="22.6"></a>
+  <a name="coercion--booleans"></a><a name="21.6"></a>
   - [22.6](#coercion--booleans) Логические типы: eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
 
     ```javascript
@@ -2962,7 +3183,7 @@
 
 ## <a name="naming-conventions">Соглашение об именовании</a>
 
-  <a name="naming--descriptive"></a><a name="23.1"></a>
+  <a name="naming--descriptive"></a><a name="22.1"></a>
   - [23.1](#naming--descriptive) Избегайте названий из одной буквы. Имя должно быть наглядным. eslint: [`id-length`](https://eslint.org/docs/rules/id-length)
 
     ```javascript
@@ -2977,7 +3198,7 @@
     }
     ```
 
-  <a name="naming--camelCase"></a><a name="23.2"></a>
+  <a name="naming--camelCase"></a><a name="22.2"></a>
   - [23.2](#naming--camelCase) Используйте `camelCase` для именования объектов, функций и экземпляров. eslint: [`camelcase`](https://eslint.org/docs/rules/camelcase.html)
 
     ```javascript
@@ -2991,7 +3212,7 @@
     function thisIsMyFunction() {}
     ```
 
-  <a name="naming--PascalCase"></a><a name="23.3"></a>
+  <a name="naming--PascalCase"></a><a name="22.3"></a>
   - [23.3](#naming--PascalCase) Используйте `PascalCase` только для именования конструкторов и классов. eslint: [`new-cap`](https://eslint.org/docs/rules/new-cap.html)
 
     ```javascript
@@ -3016,10 +3237,10 @@
     });
     ```
 
-  <a name="naming--leading-underscore"></a><a name="23.4"></a>
+  <a name="naming--leading-underscore"></a><a name="22.4"></a>
   - [23.4](#naming--leading-underscore) Не используйте `_` в начале или в конце названий. eslint: [`no-underscore-dangle`](https://eslint.org/docs/rules/no-underscore-dangle.html)
 
-    > Почему? JavaScript не имеет концепции приватности свойств или методов. Хотя подчеркивание в начале имени является распространенным соглашением, которое показывает “приватность”, фактически эти свойства являются такими же доступными, как и часть вашего публичного API. Это соглашение может привести к тому, что разработчики будут ошибочно думать, что изменения не приведут к поломке или что тесты не нужны. Итог: если вы хотите, чтобы что-то было “приватным”, то оно не должно быть доступно извне.
+    > Почему? JavaScript не имеет концепции приватности свойств или методов. Хотя подчёркивание в начале имени является распространённым соглашением, которое показывает «приватность», фактически эти свойства являются такими же доступными, как и часть вашего публичного API. Это соглашение может привести к тому, что разработчики будут ошибочно думать, что изменения не приведут к поломке или что тесты не нужны. Итог: если вы хотите, чтобы что-то было «приватным», то оно не должно быть доступно извне.
 
     ```javascript
     // плохо
@@ -3030,13 +3251,13 @@
     // хорошо
     this.firstName = 'Panda';
 
-   // хорошо, в средах, где поддерживается WeakMaps
-   // смотрите https://kangax.github.io/compat-table/es6/#test-WeakMap
-   const firstNames = new WeakMap();
-   firstNames.set(this, 'Panda');
+    // хорошо, в средах, где поддерживается WeakMaps
+    // смотрите https://kangax.github.io/compat-table/es6/#test-WeakMap
+    const firstNames = new WeakMap();
+    firstNames.set(this, 'Panda');
     ```
 
-  <a name="naming--self-this"></a><a name="23.5"></a>
+  <a name="naming--self-this"></a><a name="22.5"></a>
   - [23.5](#naming--self-this) Не сохраняйте ссылку на `this`. Используйте стрелочные функции или [метод bind()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind).
 
     ```javascript
@@ -3064,7 +3285,7 @@
     }
     ```
 
-  <a name="naming--filename-matches-export"></a><a name="23.6"></a>
+  <a name="naming--filename-matches-export"></a><a name="22.6"></a>
   - [23.6](#naming--filename-matches-export) Название файла точно должно совпадать с именем его экспорта по умолчанию.
 
     ```javascript
@@ -3100,7 +3321,7 @@
     // ^ поддерживает оба варианта: insideDirectory.js и insideDirectory/index.js
     ```
 
-  <a name="naming--camelCase-default-export"></a><a name="23.7"></a>
+  <a name="naming--camelCase-default-export"></a><a name="22.7"></a>
   - [23.7](#naming--camelCase-default-export) Используйте `camelCase`, когда экспортируете функцию по умолчанию. Ваш файл должен называться так же, как и имя функции.
     ```javascript
     function makeStyleGuide() {
@@ -3110,7 +3331,7 @@
     export default makeStyleGuide;
     ```
 
-  <a name="naming--PascalCase-singleton"></a><a name="23.8"></a>
+  <a name="naming--PascalCase-singleton"></a><a name="22.8"></a>
   - [23.8](#naming--PascalCase-singleton) Используйте `PascalCase`, когда экспортируете конструктор / класс / синглтон / библиотечную функцию / объект.
 
     ```javascript
@@ -3122,10 +3343,10 @@
     export default AirbnbStyleGuide;
     ```
 
-  <a name="naming--Acronyms-and-Initialisms"></a><a name="23.9"></a>
-  - [23.9](#naming--Acronyms-and-Initialisms) Сокращения или буквенные аббревиатуры всегда должны писаться заглавными буквами или строчными.
+  <a name="naming--Acronyms-and-Initialisms"></a>
+  - [23.9](#naming--Acronyms-and-Initialisms) Сокращения или буквенные аббревиатуры всегда должны быть в верхнем или нижнем регистре.
 
-    > Почему? Имена для удобства чтения, а не для удовлетворения компьютерных алгоритмов.
+    > Почему? Имена предназначены для удобства чтения.
 
     ```javascript
     // плохо
@@ -3162,10 +3383,10 @@
 
 ## <a name="accessors">Аксессоры</a>
 
-  <a name="accessors--not-required"></a><a name="24.1"></a>
+  <a name="accessors--not-required"></a><a name="23.1"></a>
   - [24.1](#accessors--not-required) Функции-аксессоры для свойств объекта больше не нужны.
 
-  <a name="accessors--no-getters-setters"></a><a name="24.2"></a>
+  <a name="accessors--no-getters-setters"></a><a name="23.2"></a>
   - [24.2](#accessors--no-getters-setters) Не используйте геттеры/сеттеры, т.к. они вызывают неожиданные побочные эффекты, а также их тяжело тестировать, поддерживать и понимать. Вместо этого создавайте методы `getVal()` и `setVal('hello')`.
 
     ```javascript
@@ -3192,7 +3413,7 @@
     }
     ```
 
-  <a name="accessors--boolean-prefix"></a><a name="24.3"></a>
+  <a name="accessors--boolean-prefix"></a><a name="23.3"></a>
   - [24.3](#accessors--boolean-prefix) Если свойство/метод возвращает логический тип, то используйте названия `isVal()` или `hasVal()`.
 
     ```javascript
@@ -3207,7 +3428,7 @@
     }
     ```
 
-  <a name="accessors--consistent"></a><a name="24.4"></a>
+  <a name="accessors--consistent"></a><a name="23.4"></a>
   - [24.4](#accessors--consistent) Можно создавать функции `get()` и `set()`, но нужно быть последовательным.
 
     ```javascript
@@ -3231,7 +3452,7 @@
 
 ## <a name="events">События</a>
 
-  <a name="events--hash"></a><a name="25.1"></a>
+  <a name="events--hash"></a><a name="24.1"></a>
   - [25.1](#events--hash) Когда привязываете данные к событию (например, события `DOM` или какие-то собственные события, как `Backbone` события), передавайте литерал объекта (также известный как «хэш») вместо простого значения. Это позволяет другим разработчикам добавлять больше данных без поиска и изменения каждого обработчика события. К примеру, вместо:
 
     ```javascript
@@ -3262,7 +3483,7 @@
 
 ## <a name="jquery">jQuery</a>
 
-  <a name="jquery--dollar-prefix"></a><a name="26.1"></a>
+  <a name="jquery--dollar-prefix"></a><a name="25.1"></a>
   - [26.1](#jquery--dollar-prefix) Начинайте названия переменных, хранящих объект jQuery, со знака `$`.
 
     ```javascript
@@ -3276,7 +3497,7 @@
     const $sidebarBtn = $('.sidebar-btn');
     ```
 
-  <a name="jquery--cache"></a><a name="26.2"></a>
+  <a name="jquery--cache"></a><a name="25.2"></a>
   - [26.2](#jquery--cache) Кэшируйте jQuery-поиски.
 
     ```javascript
@@ -3304,11 +3525,11 @@
     }
     ```
 
-  <a name="jquery--queries"></a><a name="26.3"></a>
-  - [26.3](#jquery--queries) Для поиска в DOM используйте каскады `$('.sidebar ul')` или селектор родитель > ребенок `$('.sidebar > ul')`. [jsPerf](http://jsperf.com/jquery-find-vs-context-sel/16)
+  <a name="jquery--queries"></a><a name="25.3"></a>
+  - [26.3](#jquery--queries) Для поиска в DOM используйте каскады `$('.sidebar ul')` или селектор родитель > ребёнок `$('.sidebar > ul')`. [jsPerf](http://jsperf.com/jquery-find-vs-context-sel/16)
 
-  <a name="jquery--find"></a><a name="26.4"></a>
-  - [26.4](#jquery--find) Используйте функцию `find` для поиска в сохраненных jQuery-объектах.
+  <a name="jquery--find"></a><a name="25.4"></a>
+  - [26.4](#jquery--find) Используйте функцию `find` для поиска в сохранённых jQuery-объектах.
 
     ```javascript
     // плохо
@@ -3331,20 +3552,20 @@
 
 ## <a name="ecmascript-5-compatibility">Поддержка ECMAScript 5</a>
 
-  <a name="es5-compat--kangax"></a><a name="27.1"></a>
+  <a name="es5-compat--kangax"></a><a name="26.1"></a>
   - [27.1](#es5-compat--kangax) Можно посмотреть в [таблице поддержки](https://kangax.github.io/es5-compat-table/) ES5 от пользователя [Kangax](https://twitter.com/kangax/) .
 
 **[⬆ к оглавлению](#Оглавление)**
 
 ## <a name="ecmascript-6-es-2015-styles">Возможности ECMAScript 6+ (ES 2015+)</a>
 
-  <a name="es6-styles"></a><a name="28.1"></a>
+  <a name="es6-styles"></a><a name="27.1"></a>
   - [28.1](#es6-styles) Здесь собраны ссылки на различные возможности ES6.
 
   1. [Стрелочные функции](#arrow-functions)
   1. [Классы и конструкторы](#classes--constructors)
-  1. [Сокращенная запись методов объекта](#es6-object-shorthand)
-  1. [Сокращенная запись свойств объекта](#es6-object-concise)
+  1. [Сокращённая запись методов объекта](#es6-object-shorthand)
+  1. [Сокращённая запись свойств объекта](#es6-object-concise)
   1. [Вычисляемые имена свойств объекта](#es6-computed-properties)
   1. [Шаблонные строки](#es6-template-literals)
   1. [Деструктуризация](#destructuring)
@@ -3358,7 +3579,7 @@
   <a name="tc39-proposals"></a>
   - [28.2](#tc39-proposals) Не используйте [предложения TC39](https://github.com/tc39/proposals), которые не перешли на 3-ю стадию.
 
-    > Почему? [Они еще не закончены](https://tc39.github.io/process-document/) и могут быть изменены или полностью изъяты. Мы хотим использовать JavaScript, а предложения еще не стали частью JavaScript.
+    > Почему? [Они ещё не закончены](https://tc39.github.io/process-document/) и могут быть изменены или полностью изъяты. Мы хотим использовать JavaScript, а предложения ещё не стали частью JavaScript.
 
 **[⬆ к оглавлению](#Оглавление)**
 
@@ -3367,11 +3588,11 @@
   [Стандартная библиотека](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects)
   содержит утилиты, функциональность которых сломана, но они остались для поддержки старого кода.
 
-  <a name="standard-library--isnan"></a><a name="29.1"></a>
+  <a name="standard-library--isnan"></a>
   - [29.1](#standard-library--isnan) Используйте `Number.isNaN` вместо глобального `isNaN`.
     eslint: [`no-restricted-globals`](https://eslint.org/docs/rules/no-restricted-globals)
 
-    > Почему? Глобальная функция `isNaN` приводит не числа к числам, возвращая `true` для всего, что приводится к `NaN`.
+    > Почему? Глобальная функция `isNaN` приводит не-числа к числам, возвращая `true` для всего, что приводится к `NaN`.
     > Если такое поведение необходимо, сделайте его явным.
 
     ```javascript
@@ -3384,11 +3605,11 @@
     Number.isNaN(Number('1.2.3')); // true
     ```
 
-  <a name="standard-library--isfinite"></a><a name="29.2"></a>
+  <a name="standard-library--isfinite"></a>
   - [29.2](#standard-library--isfinite) Используйте `Number.isFinite` вместо глобального `isFinite`.
     eslint: [`no-restricted-globals`](https://eslint.org/docs/rules/no-restricted-globals)
 
-    > Почему? Глобальная функция `isFinite` приводит не числа к числам, возвращая `true` для всего, что приводится к конечному числу.
+    > Почему? Глобальная функция `isFinite` приводит не-числа к числам, возвращая `true` для всего, что приводится к конечному числу.
     > Если такое поведение необходимо, сделайте его явным.
 
     ```javascript
@@ -3404,7 +3625,7 @@
 
 ## <a name="testing">Тестирование</a>
 
-  <a name="testing--yup"></a><a name="30.1"></a>
+  <a name="testing--yup"></a><a name="28.1"></a>
   - [30.1](#testing--yup) **Ага.**
 
     ```javascript
@@ -3413,14 +3634,14 @@
     }
     ```
 
-  <a name="testing--for-real"></a><a name="30.2"></a>
-  - [30.2](#testing--for-real) **Нет, но серьезно**:
+  <a name="testing--for-real"></a><a name="28.2"></a>
+  - [30.2](#testing--for-real) **Нет, но серьёзно**:
     - Какой бы фреймворк вы не использовали, вы должны писать тесты!
     - Стремитесь к тому, чтобы написать много маленьких чистых функций, и к тому, чтобы свести к минимуму места, где происходят мутации.
     - Будьте осторожны со стабами (stubs) и моками (mocks) — они могут сделать ваше тестирование хрупким.
     - Мы в первую очередь советуем вам использовать [`mocha`](https://www.npmjs.com/package/mocha) и [`jest`](https://www.npmjs.com/package/jest) от Airbnb. [`tape`](https://www.npmjs.com/package/tape) также иногда используется для небольших, отдельных модулей.
     - 100% покрытие тестами — это хорошая цель, к которой надо стремиться, даже если это не всегда практично.
-    - Всякий раз, когда вы исправляете ошибку, _пишите регрессионный тест_. Исправленная ошибка без регрессионного тестирования почти наверняка всплывет в будущем.
+    - Всякий раз, когда вы исправляете ошибку, _пишите регрессионный тест_. Исправленная ошибка без регрессионного тестирования почти наверняка всплывёт в будущем.
 
 **[⬆ к оглавлению](#Оглавление)**
 
@@ -3428,12 +3649,12 @@
 
   - [On Layout & Web Performance](https://www.kellegous.com/j/2013/01/26/layout-performance/)
   - [String vs Array Concat](https://jsperf.com/string-vs-array-concat/2)
-  - [Try/Catch Cost In a Loop](https://jsperf.com/try-catch-in-loop-cost)
+  - [Try/Catch Cost In a Loop](https://jsperf.com/try-catch-in-loop-cost/12)
   - [Bang Function](https://jsperf.com/bang-function)
-  - [jQuery Find vs Context, Selector](https://jsperf.com/jquery-find-vs-context-sel/13)
+  - [jQuery Find vs Context, Selector](https://jsperf.com/jquery-find-vs-context-sel/164)
   - [innerHTML vs textContent for script text](https://jsperf.com/innerhtml-vs-textcontent-for-script-text)
-  - [Long String Concatenation](https://jsperf.com/ya-string-concat)
-  - [Are Javascript functions like `map()`, `reduce()`, and `filter()` optimized for traversing arrays?](https://www.quora.com/JavaScript-programming-language-Are-Javascript-functions-like-map-reduce-and-filter-already-optimized-for-traversing-array/answer/Quildreen-Motta)
+  - [Long String Concatenation](https://jsperf.com/ya-string-concat/38)
+  - [Are JavaScript functions like `map()`, `reduce()`, and `filter()` optimized for traversing arrays?](https://www.quora.com/JavaScript-programming-language-Are-Javascript-functions-like-map-reduce-and-filter-already-optimized-for-traversing-array/answer/Quildreen-Motta)
   - Загрузка...
 
 **[⬆ к оглавлению](#Оглавление)**
@@ -3442,7 +3663,7 @@
 
 **Изучение ES6+**
 
-  - [Последняя спецификаия ECMA](https://tc39.github.io/ecma262/)
+  - [Последняя спецификация ECMA](https://tc39.github.io/ecma262/)
   - [ExploringJS](http://exploringjs.com/)
   - [ES6 Compatibility Table](https://kangax.github.io/compat-table/es6/)
   - [Comprehensive Overview of ES6 Features](http://es6-features.org/)
@@ -3456,11 +3677,12 @@
   - Линтеры
     - [ESlint](https://eslint.org/) - [Airbnb Style .eslintrc](https://github.com/airbnb/javascript/blob/master/linters/.eslintrc)
     - [JSHint](http://jshint.com/) - [Airbnb Style .jshintrc](https://github.com/airbnb/javascript/blob/master/linters/.jshintrc)
-  - Neutrino preset - [neutrino-preset-airbnb-base](https://neutrino.js.org/presets/neutrino-preset-airbnb-base/)
+  - Neutrino Preset - [@neutrinojs/airbnb](https://neutrinojs.org/packages/airbnb/)
 
 **Другие руководства**
 
-  - [Google JavaScript Style Guide](https://google.github.io/styleguide/javascriptguide.xml)
+  - [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)
+  - [Google JavaScript Style Guide (Old)](https://google.github.io/styleguide/javascriptguide.xml)
   - [jQuery Core Style Guidelines](https://contribute.jquery.org/style-guide/js/)
   - [Principles of Writing Consistent, Idiomatic JavaScript](https://github.com/rwaldron/idiomatic.js)
   - [StandardJS](https://standardjs.com)
@@ -3484,7 +3706,7 @@
 
   - [JavaScript: The Good Parts](https://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742) - Douglas Crockford
   - [JavaScript Patterns](https://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752) - Stoyan Stefanov
-  - [Pro JavaScript Design Patterns](https://www.amazon.com/JavaScript-Design-Patterns-Recipes-Problem-Solution/dp/159059908X)  - Ross Harmes and Dustin Diaz
+  - [Pro JavaScript Design Patterns](https://www.amazon.com/JavaScript-Design-Patterns-Recipes-Problem-Solution/dp/159059908X) - Ross Harmes and Dustin Diaz
   - [High Performance Web Sites: Essential Knowledge for Front-End Engineers](https://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309) - Steve Souders
   - [Maintainable JavaScript](https://www.amazon.com/Maintainable-JavaScript-Nicholas-C-Zakas/dp/1449327680) - Nicholas C. Zakas
   - [JavaScript Web Applications](https://www.amazon.com/JavaScript-Web-Applications-Alex-MacCaw/dp/144930351X) - Alex MacCaw
@@ -3497,7 +3719,7 @@
   - [Third Party JavaScript](https://www.manning.com/books/third-party-javascript) - Ben Vinegar and Anton Kovalyov
   - [Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript](http://amzn.com/0321812182) - David Herman
   - [Eloquent JavaScript](http://eloquentjavascript.net/) - Marijn Haverbeke
-  - [You Don't Know JS: ES6 & Beyond](http://shop.oreilly.com/product/0636920033769.do) - Kyle Simpson
+  - [You Don’t Know JS: ES6 & Beyond](http://shop.oreilly.com/product/0636920033769.do) - Kyle Simpson
 
 **Блоги**
 
@@ -3520,7 +3742,7 @@
 
 ## <a name="in-the-wild">В реальной жизни</a>
 
-  Это список организаций, которые используют данное руководство. Отправьте нам пулреквест и мы добавим вас в этот список.
+  Это список организаций, которые используют данное руководство. Отправьте нам пулреквест, и мы добавим вас в этот список.
 
   - **123erfasst**: [123erfasst/javascript](https://github.com/123erfasst/javascript)
   - **3blades**: [3Blades](https://github.com/3blades)
@@ -3540,7 +3762,9 @@
   - **Bonhomme**: [bonhommeparis/javascript](https://github.com/bonhommeparis/javascript)
   - **Brainshark**: [brainshark/javascript](https://github.com/brainshark/javascript)
   - **CaseNine**: [CaseNine/javascript](https://github.com/CaseNine/javascript)
+  - **Cerner**: [Cerner](https://github.com/cerner/)
   - **Chartboost**: [ChartBoost/javascript-style-guide](https://github.com/ChartBoost/javascript-style-guide)
+  - **Coeur d'Alene Tribe**: [www.cdatribe-nsn.gov](https://www.cdatribe-nsn.gov)
   - **ComparaOnline**: [comparaonline/javascript](https://github.com/comparaonline/javascript-style-guide)
   - **Compass Learning**: [compasslearning/javascript-style-guide](https://github.com/compasslearning/javascript-style-guide)
   - **DailyMotion**: [dailymotion/javascript](https://github.com/dailymotion/javascript)
@@ -3561,6 +3785,7 @@
   - **GreenChef**: [greenchef/javascript](https://github.com/greenchef/javascript)
   - **Grooveshark**: [grooveshark/javascript](https://github.com/grooveshark/javascript)
   - **Grupo-Abraxas**: [Grupo-Abraxas/javascript](https://github.com/Grupo-Abraxas/javascript)
+  - **Happeo**: [happeo/javascript](https://github.com/happeo/javascript)
   - **Honey**: [honeyscience/javascript](https://github.com/honeyscience/javascript)
   - **How About We**: [howaboutwe/javascript](https://github.com/howaboutwe/javascript-style-guide)
   - **Huballin**: [huballin](https://github.com/huballin/)
@@ -3584,18 +3809,20 @@
   - **Muber**: [muber](https://github.com/muber/)
   - **National Geographic**: [natgeo](https://github.com/natgeo/)
   - **Nimbl3**: [nimbl3/javascript](https://github.com/nimbl3/javascript)
+  - **NullDev**: [NullDevCo/JavaScript-Styleguide](https://github.com/NullDevCo/JavaScript-Styleguide)
   - **Nulogy**: [nulogy/javascript](https://github.com/nulogy/javascript)
   - **Orange Hill Development**: [orangehill/javascript](https://github.com/orangehill/javascript)
   - **Orion Health**: [orionhealth/javascript](https://github.com/orionhealth/javascript)
   - **OutBoxSoft**: [OutBoxSoft/javascript](https://github.com/OutBoxSoft/javascript)
   - **Peerby**: [Peerby/javascript](https://github.com/Peerby/javascript)
+  - **Pier 1**: [Pier1/javascript](https://github.com/pier1/javascript)
   - **Qotto**: [Qotto/javascript-style-guide](https://github.com/Qotto/javascript-style-guide)
   - **Razorfish**: [razorfish/javascript-style-guide](https://github.com/razorfish/javascript-style-guide)
   - **reddit**: [reddit/styleguide/javascript](https://github.com/reddit/styleguide/tree/master/javascript)
   - **React**: [facebook.github.io/react/contributing/how-to-contribute.html#style-guide](https://facebook.github.io/react/contributing/how-to-contribute.html#style-guide)
   - **REI**: [reidev/js-style-guide](https://github.com/rei/code-style-guides/)
   - **Ripple**: [ripple/javascript-style-guide](https://github.com/ripple/javascript-style-guide)
-  - **Sainsbury's Supermarkets**: [jsainsburyplc](https://github.com/jsainsburyplc)
+  - **Sainsbury’s Supermarkets**: [jsainsburyplc](https://github.com/jsainsburyplc)
   - **SeekingAlpha**: [seekingalpha/javascript-style-guide](https://github.com/seekingalpha/javascript-style-guide)
   - **Shutterfly**: [shutterfly/javascript](https://github.com/shutterfly/javascript)
   - **Sourcetoad**: [sourcetoad/javascript](https://github.com/sourcetoad/javascript)
@@ -3607,9 +3834,13 @@
   - **SysGarage**: [sysgarage/javascript-style-guide](https://github.com/sysgarage/javascript-style-guide)
   - **Syzygy Warsaw**: [syzygypl/javascript](https://github.com/syzygypl/javascript)
   - **Target**: [target/javascript](https://github.com/target/javascript)
+  - **Terra**: [terra](https://github.com/cerner?utf8=%E2%9C%93&q=terra&type=&language=)
   - **TheLadders**: [TheLadders/javascript](https://github.com/TheLadders/javascript)
   - **The Nerdery**: [thenerdery/javascript-standards](https://github.com/thenerdery/javascript-standards)
+  - **Tomify**: [tomprats](https://github.com/tomprats)
+  - **Traitify**: [traitify/eslint-config-traitify](https://github.com/traitify/eslint-config-traitify)
   - **T4R Technology**: [T4R-Technology/javascript](https://github.com/T4R-Technology/javascript)
+  - **UrbanSim**: [urbansim](https://github.com/urbansim/)
   - **VoxFeed**: [VoxFeed/javascript-style-guide](https://github.com/VoxFeed/javascript-style-guide)
   - **WeBox Studio**: [weboxstudio/javascript](https://github.com/weboxstudio/javascript)
   - **Weggo**: [Weggo/javascript](https://github.com/Weggo/javascript)
@@ -3625,7 +3856,7 @@
   - ![br](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Brazil.png) **Бразильский вариант португальского языка**: [armoucar/javascript-style-guide](https://github.com/armoucar/javascript-style-guide)
   - ![bg](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Bulgaria.png) **Болгарский**: [borislavvv/javascript](https://github.com/borislavvv/javascript)
   - ![ca](https://raw.githubusercontent.com/fpmweb/javascript-style-guide/master/img/catala.png) **Каталонский**: [fpmweb/javascript-style-guide](https://github.com/fpmweb/javascript-style-guide)
-  - ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **Китайский (Упрощенный)**: [yuche/javascript](https://github.com/yuche/javascript)
+  - ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **Китайский (Упрощённый)**: [lin-123/javascript](https://github.com/lin-123/javascript)
   - ![tw](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Taiwan.png) **Китайский (Традиционный)**: [jigsawye/javascript](https://github.com/jigsawye/javascript)
   - ![fr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/France.png) **Французский**: [nmussy/javascript-style-guide](https://github.com/nmussy/javascript-style-guide)
   - ![de](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Germany.png) **Немецкий**: [timofurrer/javascript-style-guide](https://github.com/timofurrer/javascript-style-guide)
@@ -3637,7 +3868,7 @@
   - ![th](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Thailand.png) **Тайский**: [lvarayut/javascript-style-guide](https://github.com/lvarayut/javascript-style-guide)
   - ![tr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Turkey.png) **Турецкий**: [eraycetinay/javascript](https://github.com/eraycetinay/javascript)
   - ![ua](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Ukraine.png) **Украинский**: [ivanzusko/javascript](https://github.com/ivanzusko/javascript)
-  - ![vn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Vietnam.png) **Вьетнамский**: [hngiang/javascript-style-guide](https://github.com/hngiang/javascript-style-guide)
+  - ![vn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Vietnam.png) **Вьетнамский**: [dangkyokhoang/javascript-style-guide](https://github.com/dangkyokhoang/javascript-style-guide)
 
 **[⬆ к оглавлению](#Оглавление)**
 
